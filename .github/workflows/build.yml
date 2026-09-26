@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Compile and validate
-        run: ./scripts/check.sh
+        run: zsh ./scripts/check.sh
