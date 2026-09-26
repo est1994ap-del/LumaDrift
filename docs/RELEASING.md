@@ -1,13 +1,13 @@
 # Release checklist
 
 1. Update the version in both app property lists, `CHANGELOG.md`, and `RELEASE_NOTES.md`.
-2. Run `./scripts/check.sh` on a clean checkout.
-3. Run `./install.sh` and verify selection, custom import, login startup, sleep, wake, and multiple displays.
-4. Build the installer with `./scripts/build-installer.sh VERSION`.
+2. Run `zsh ./scripts/check.sh` on a clean checkout.
+3. Run `zsh ./install.sh` and verify selection, custom import, login startup, sleep, wake, and multiple displays.
+4. Build the installer with `zsh ./scripts/build-installer.sh VERSION`.
 5. Expand the package with `pkgutil --expand-full` and inspect its app payload.
 6. Confirm no Apple video, local catalog data, logs, or user media appear in Git or the package.
 7. Commit the release and create the matching `vVERSION` tag.
-8. Build the source archive with `./scripts/package-release.sh VERSION`.
+8. Build the source archive with `zsh ./scripts/package-release.sh VERSION`.
 9. Verify `SHA256SUMS.txt` covers the source ZIP and macOS package.
 10. Create the GitHub release and upload the `.pkg`, source ZIP, and checksum file.
 11. Verify the public screenshot, download links, checksum, and beginner installation instructions.

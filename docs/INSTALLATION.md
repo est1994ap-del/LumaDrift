@@ -58,8 +58,8 @@ required.
 ```sh
 git clone https://github.com/est1994ap-del/LumaDrift.git
 cd LumaDrift
-./install.sh
+zsh ./install.sh
 ```
 
 If `swiftc` is missing, run `xcode-select --install`, complete Apple's setup,
-then run `./install.sh` again.
+then run `zsh ./install.sh` again.
