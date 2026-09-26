@@ -74,7 +74,7 @@ do {
         guard arguments.count == 3 else { fail("usage: CatalogTool array NDJSON OUTPUT") }
         let source = try String(contentsOfFile: arguments[1], encoding: .utf8)
         let decoder = JSONDecoder()
-        let entries = try source.split(whereSeparator: \Character.isNewline).map {
+        let entries = try source.split(whereSeparator: { $0.isNewline }).map {
             try decoder.decode(CatalogEntry.self, from: Data($0.utf8))
         }
         let encoder = JSONEncoder()
