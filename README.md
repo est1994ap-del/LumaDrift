@@ -81,7 +81,7 @@ Tools:
 ```sh
 git clone https://github.com/est1994ap-del/LumaDrift.git
 cd LumaDrift
-./install.sh
+zsh ./install.sh
 ```
 
 See [Installation](docs/INSTALLATION.md), [Using LumaDrift](docs/USING.md), and
